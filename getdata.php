@@ -14,6 +14,6 @@ if (substr($binary, 0, 3) == "ID3") {
   $tags['Version'] = hexdec(bin2hex(substr($binary, 3, 1))) . "." . hexdec(bin2hex(substr($binary, 4, 1)));
 }
 
-echo tags
+echo $tags
 
 ?>
