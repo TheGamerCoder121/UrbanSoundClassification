@@ -1,3 +1,7 @@
+<?php
+  session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -43,7 +47,7 @@
                 <h5 style="text-align: center;">Prediction:</h5><button class="btn btn-primary btn-center" type="button"
                     onclick="predict(model)">Predict</button>
 
-                <form id="upload-form" action="getdata.php" method="post" enctype="multipart/form-data">
+                <form id="upload-form" action="getdata.php" method="POST" enctype="multipart/form-data">
                     <label for="fileToUpload" class="btn btn-primary btn-form">
                         <i class="fa fa-cloud-upload"></i> Upload File
                     </label>

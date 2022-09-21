@@ -1,5 +1,5 @@
 <?php
-session_start();
+// session_start();
  
 $message = ''; 
 if (isset($_POST['uploadBtn']) && $_POST['uploadBtn'] == 'Upload')

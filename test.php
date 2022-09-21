@@ -11,7 +11,7 @@ session_start();
   <?php
     if (isset($_SESSION['message']) && $_SESSION['message'])
     {
-      echo '<p class="notification">'.$_SESSION['message']).'</p>';
+      echo '<p class="notification">'.$_SESSION['message'].'</p>';
       unset($_SESSION['message']);
     }
   ?>
