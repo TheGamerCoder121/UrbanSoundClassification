@@ -37,7 +37,7 @@ class Mp3
   ];
 
   // Other methods.
-  public function readAudioData(file)
+  public function readAudioData()
   {
     // // Open the file.
     // $file = fopen($this->file, "rb");
