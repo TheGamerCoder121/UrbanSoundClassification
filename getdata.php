@@ -1,11 +1,12 @@
 <?php
 include_once('index.php');
 include_once('classes.php');
-
+$mp3Inst = new Mp3();
 
 $message = '';
 if (isset($_POST['submit']) && $_POST['submit'] == 'Submit') {
     if (isset($_FILES['fileToUpload']) && $_FILES['fileToUpload']['error'] === UPLOAD_ERR_OK) {
+        
         // get details of the uploaded file
         $fileTmpPath = $_FILES['fileToUpload']['tmp_name'];
         $fileName = $_FILES['fileToUpload']['name'];
@@ -33,7 +34,7 @@ if (isset($_POST['submit']) && $_POST['submit'] == 'Submit') {
                 // Detect presence of ID3 information.
                 if (substr($binary, 0, 3) == "ID3") {
                     // ID3 tags detected.
-                    $tags['FileName'] = $fileName;
+                    $tags['FileName'] = ;
                     $tags['TAG'] = substr($binary, 0, 3);
                     $tags['Version'] = hexdec(bin2hex(substr($binary, 3, 1))) . "." . hexdec(bin2hex(substr($binary, 4, 1)));
                 }
@@ -155,7 +156,7 @@ if (isset($_POST['submit']) && $_POST['submit'] == 'Submit') {
                     }
 
 
-                    print_r($tags);
+                    echo $mp3Inst->readAudioData($fileHandle);
                 }
             } else {
                 $message = 'There was some error moving the file to upload directory. Please make sure the upload directory is writable by web server.';
@@ -169,5 +170,4 @@ if (isset($_POST['submit']) && $_POST['submit'] == 'Submit') {
     }
 }
 $_SESSION['message'] = $message;
-
 echo $message;

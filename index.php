@@ -33,7 +33,7 @@
                     navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navcol-5">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="#">First Item</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="index">First Item</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Second Item</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Third Item</a></li>
                 </ul><a class="btn btn-primary ms-md-2" role="button" href="#">Button</a>
@@ -47,7 +47,7 @@
                 <h5 style="text-align: center;">Prediction:</h5><button class="btn btn-primary btn-center" type="button"
                     onclick="predict(model)">Predict</button>
 
-                <form id="upload-form" action="getdata.php" method="POST" enctype="multipart/form-data">
+                <form id="upload-form" action="getdata" method="POST" enctype="multipart/form-data">
                     <label for="fileToUpload" class="btn btn-primary btn-form">
                         <i class="fa fa-cloud-upload"></i> Upload File
                     </label>
